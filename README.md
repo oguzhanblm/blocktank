@@ -1,2 +1,2 @@
-# blocktank
-Mobil için geliştirilmiş "casual" bir 3d fps tank oyunu
+# Block Tank
+Mobil için geliştirilmiş "casual" bir 3d fps tank oyunu.
