@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Movement")]
-    //public float moveSpeed; KAMERA
+    
 
     public Transform orientation;
 
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveTouchStartPosition;
     private Vector2 moveInput;
 
-    //float horizontalInput;   KAMERA
+    //float horizontalInput;   for computer
     //float verticalInput;
 
     Vector3 moveDirection;
@@ -172,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //MyInput();  KAMERA
+        //MyInput();  for computer
         SpeedControl();
 
         GetTouchInput();
@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //MovePlayer(); KAMERA
+        //MovePlayer(); for computer
         RaycastGun();
 
         if (leftFingerId != -1)
@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private void MyInput() KAMERA
+    //private void MyInput() for computer
     //{
     //    horizontalInput = Input.GetAxisRaw("Horizontal");
     //    verticalInput = Input.GetAxisRaw("Vertical");
@@ -208,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         // calculate movement direction
-        //moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;  KAMERA
+        //moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;  for computer
 
         //rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
@@ -255,7 +255,7 @@ public class PlayerMovement : MonoBehaviour
                     tankr = hit.collider.gameObject;
                     EnemyHitbox enemyHitbox = tankr.GetComponent<EnemyHitbox>();
                     enemyHitbox.LaserHit2();
-                    //Debug.Log("tanký vuruyom");
+                    //Debug.Log("tanki vuruyom");
 
                     audioSource.PlayOneShot(playerFire, 1.0F);
 
@@ -265,7 +265,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    //Debug.Log("boþa sýkýyom");
+                    //Debug.Log("bosa vuruyom");
                 }
             }
             timer = 0;
@@ -904,7 +904,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //incrase health +1 and some queries
+    //increase health +1 and some queries
     public void Healthup()
     {
         health += 1;
@@ -1126,6 +1126,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    //Camera rotation control
     private void LookAround()
     {
 
