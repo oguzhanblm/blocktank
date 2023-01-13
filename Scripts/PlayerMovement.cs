@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject hill2;
     public GameObject hill3;
     public GameObject hole1;
+    
 
     [Header("Level Buttons")]
     public Button[] buttons;
